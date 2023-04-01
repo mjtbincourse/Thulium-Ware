@@ -7,7 +7,7 @@ local win =
         FolderToSave = "Sadarwf-Ware"
     }
 )
-
+local TaskWait = task.wait
 local VirtualInputManager = game:GetService("VirtualInputManager")
 
 local main = win:Tab("-Main")
@@ -35,7 +35,7 @@ local toggle =
 
 local toggle =
     autofarm:Toggle(
-    "Fast-AutoInteract",
+    "Auto-Interact",
     false,
     "Toggle",
     function(coems)
@@ -43,7 +43,7 @@ local toggle =
         while _G.iii do
             wait(.1)
             VirtualInputManager:SendKeyEvent(true, "E", false, nil)
-            task.wait()
+            TaskWait()
             VirtualInputManager:SendKeyEvent(false, "E", false, nil)
             game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(
                 function(prompt)
