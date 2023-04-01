@@ -43,7 +43,7 @@ local toggle =
         while _G.iii do
             wait(.1)
             VirtualInputManager:SendKeyEvent(true, "E", false, nil)
-            TaskWait()
+            task.wait()
             VirtualInputManager:SendKeyEvent(false, "E", false, nil)
             game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(
                 function(prompt)
