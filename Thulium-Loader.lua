@@ -7,7 +7,7 @@ end)
 local thuliumm = "https://raw.githubusercontent.com/mjtbincourse/Thulium-Ware/main/"
 
 local games = {
-    [9216815133] = "Trollge%20Conventions",
+    [9216815133] = "Trollge%20Conventions.lua",
 }
 
 for i, v in pairs(games) do
