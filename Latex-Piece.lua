@@ -177,3 +177,14 @@ suu:NewButton(
         game:GetService("Workspace"):FindFirstChild("Water"):Destroy()
     end
 )
+
+local CC = Window:NewTab("Credits")
+local credits = CC:NewSection("Credits")
+
+credits:NewButton(
+    "sadawrf#3405",
+    " ",
+    function()
+        setclipboard("sadawrf#3405")
+    end
+)
