@@ -89,20 +89,20 @@ woah:NewToggle(
     "Auto-Attack",
     " ",
     function(q)
-        local ToolName = Weapon
-        _G.autoattackk = q
-        while _G.autoattackk do
-            local tool = game.Players.LocalPlayer.Character:FindFirstChild(ToolName)
-            if tool then
-                tool.Parent = game.Players.LocalPlayer.Backpack
-                tool.Parent = game.Players.LocalPlayer.Character
-
-                tool:Activate()
-                wait(UseDelay)
-            else
-                wait()
-            end
-        end
+local ToolName = Weapon
+_G.autoattackk = q
+while _G.autoattackk do
+    local tool = game.Players.LocalPlayer.Character:FindFirstChild(ToolName)
+    if tool then
+        tool.Parent = game.Players.LocalPlayer.Backpack
+        tool.Parent = game.Players.LocalPlayer.Character
+        
+        tool:Activate()
+        wait(UseDelay)
+    else
+        wait()
+    end
+end
     end
 )
 
@@ -118,7 +118,7 @@ woah:NewToggle(
                     for i, v in pairs(game:GetService("Workspace").Monster[getgenv().folder]:GetDescendants()) do
                         if v:FindFirstChild("HumanoidRootPart") then
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
-                                v.HumanoidRootPart.CFrame * CFrame.new(-5, -7, 0)
+                                v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 7)
                         end
                     end
                 end
