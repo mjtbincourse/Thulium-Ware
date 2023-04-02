@@ -89,20 +89,20 @@ woah:NewToggle(
     "Auto-Attack",
     " ",
     function(q)
-        getgenv().ToolName = _G.Weapon
-        _G.autoattackk = q
-        while _G.autoattackk do
-            local tool = game.Players.LocalPlayer.Character:FindFirstChild(ToolName)
-            if tool then
-                tool.Parent = game.Players.LocalPlayer.Backpack
-                tool.Parent = game.Players.LocalPlayer.Character
-
-                tool:Activate()
-                wait(UseDelay)
-            else
-                wait()
-            end
-        end
+getgenv().ToolName = _G.Weapon
+_G.autoattackk = q
+while _G.autoattackk do
+    local tool = game.Players.LocalPlayer.Character:FindFirstChild(getgenv().ToolName)
+    if tool then
+        tool.Parent = game.Players.LocalPlayer.Backpack
+        tool.Parent = game.Players.LocalPlayer.Character
+        
+        tool:Activate()
+        wait(UseDelay)
+    else
+        wait()
+    end
+end
     end
 )
 
