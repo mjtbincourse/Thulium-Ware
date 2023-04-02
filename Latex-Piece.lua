@@ -6,7 +6,7 @@ local colors = {
     AccentColor = Color3.fromRGB(255, 215, 0)
 }
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Thulium-Ware Beta|Latex Piece", colors)
+local Window = Library.CreateLib("Thulium-Ware |Latex Piece", colors)
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Configuration")
 local Weaponlist = {}
