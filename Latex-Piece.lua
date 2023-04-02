@@ -16,6 +16,7 @@ local Defense2 = game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Stats_F
 local Sword3 = game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Stats_Frame.Sword.UpEvent
 local Gun4 = game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Stats_Frame.Gun.UpEvent
 local Glue5 = game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Stats_Frame.Glue.UpEvent
+local UseDelay = math.mininteger
 
 for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     table.insert(Weaponlist, v.Name)
@@ -85,6 +86,27 @@ spawn(
 )
 
 woah:NewToggle(
+    "Auto-Attack",
+    " ",
+    function(q)
+local ToolName = Weapon
+_G.autoattackk = q
+while _G.autoattackk do
+    local tool = game.Players.LocalPlayer.Character:FindFirstChild(ToolName)
+    if tool then
+        tool.Parent = game.Players.LocalPlayer.Backpack
+        tool.Parent = game.Players.LocalPlayer.Character
+        
+        tool:Activate()
+        wait(UseDelay)
+    else
+        wait()
+    end
+end
+    end
+)
+
+woah:NewToggle(
     "Auto-Farm Selected",
     " ",
     function(y)
@@ -97,7 +119,6 @@ woah:NewToggle(
                         if v:FindFirstChild("HumanoidRootPart") then
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame =
                                 v.HumanoidRootPart.CFrame * CFrame.new(-5, -7, 0)
-                            workspace[game.Players.LocalPlayer.Name].Combat.Main.RemoteEvent:FireServer("A")
                         end
                     end
                 end
