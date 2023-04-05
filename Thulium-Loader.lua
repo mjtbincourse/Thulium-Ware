@@ -3,7 +3,8 @@ local thuliumm = "https://raw.githubusercontent.com/mjtbincourse/Thulium-Ware/ma
 local games = {
     [9216815133] = "Trollge%20Conventions.lua",
     [12860567360] = "Latex-Piece.lua",
-    [5303541547] = "Two%20Piece.lua"
+    [5303541547] = "Two%20Piece.lua",
+    [12616541908] = "King-Of-Sea.lua"
 }
 
 for i, v in pairs(games) do
