@@ -64,8 +64,8 @@ Section:NewToggle(
                                 end
                             end
                             repeat
-                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6)
-                                task.wait()
+                                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0, 0, 5)
+                                wait()
                                 local weapon = game.Players.LocalPlayer.Character:FindFirstChild(_G.tools)
                                 if weapon then
                                     weapon.Parent = game.Players.LocalPlayer.Backpack
@@ -73,7 +73,7 @@ Section:NewToggle(
                                     weapon:Activate()
                                     task.wait(UseDelay)
                                 end
-                                game.Players.LocalPlayer.Character.Humanoid.Health = 100
+                                game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
                             until v.Humanoid.Health <= 0 or not _G.task
                         end
                     end
